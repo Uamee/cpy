@@ -1,0 +1,110 @@
+.loginForm {
+  background-color: var(--component-color);
+  display: flex;
+  width: 40%;
+  margin: auto;
+  margin-top: 20%;
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: 10px;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 250px;
+}
+
+.inputBox {
+  margin-bottom: 20px;
+  border: 1px solid var(--border-input-color);
+  min-height: 25px;
+  display: flex;
+  align-items: center;
+  transition: 0.5s linear;
+  padding: 5px;
+}
+
+.inputBox input {
+  width: 90%;
+  height: 25px;
+  border: none;
+}
+
+.inputBox input:focus {
+  outline: none;
+}
+
+.inputBox:hover {
+  border-color: var(--border-input-hover-color);
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.containerTwo {
+  font-size: 14px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.containerTwo span {
+  margin-left: 10px;
+}
+
+.containerTwo input[type="checkbox"] {
+  margin-right: 10px;
+
+  position: relative;
+}
+
+.containerTwo input[type="checkbox"]::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: var(--base-color);
+  border: 1px var(--click-color) solid;
+  cursor: pointer;
+  transition: linear 0.4s;
+}
+
+.containerTwo input[type="checkbox"]:checked:after {
+  content: "\2713";
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: var(--click-color);
+  border: 1px var(--border-input-color) solid;
+  transition: linear 0.4s;
+}
+
+.containerTree {
+  display: flex;
+  flex-direction: column;
+}
+
+.containerTree button {
+  height: 30px;
+  border-radius: 5px;
+}
+
+.containerTree span {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+@media screen and (max-width:769px) {
+  .loginForm {
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+
+}
